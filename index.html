@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Banner Cycler</title>
+    <meta charset="utf-8">
+    <script language="JavaScript" src="main.js">
+    </script>
+    <style type="text/css">
+        mark{
+            background-color:red;
+            color:white;
+        }
+        .p1css{
+            text-align:center;
+            font-weight:bold;
+        }
+    </style>
+
+</head>
+<body onload = "init()" onunload="saveWinner()">
+    <!--<img id="banner" alt="banner" src="banner1.jpg" />-->
+    <form>
+        <input type="radio" name="mode" value="dupPrize" id="radio1" onclick="radioClick(this)"/>重复抽奖<br/>
+        <input type="radio" name="mode" value="singlePrize" id="radio2" onclick="radioClick(this)"/>一次中奖</form>
+    <div style="float:left;width:70%;">
+        <p class="p1css" id="wheellocate1" ></p>
+        <p class="p1css" id="wheellocate2" ></p>
+        <p class="p1css" >
+            <mark id="wheellocate3"> </mark>
+        </p>
+        <p class="p1css" id="wheellocate4" ></p>
+        <p class="p1css" id="wheellocate5" ></p>
+
+        <p>
+            <input type="button" id="WinnerButton" value="抽奖" />
+            <audio id="musicId" >
+                <source src="YouBelongToMe.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </p>
+    </div>
+    <div style="float:right;width:30%;">
+        <!--<h4>一行两列：</h4> -->
+        <table border="1" id="tableOutput">
+            <tr>
+                <td>序号</td>
+                <td>-获奖者-</td>
+            </tr>
+            <!--  <tr >
+                  <td>1</td>
+                  <td>陈涵深</td>
+              </tr> -->
+        </table>
+    </div>
+    <div style="float: left;clear: left;">
+       <textarea id="winnerOutput" cols="20" rows="3">
+       </textarea>
+    </div>
+ <!--   <p id="dispWinner">中奖结果：</p>  -->
+
+</body>
+</html>
